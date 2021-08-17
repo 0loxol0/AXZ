@@ -635,8 +635,6 @@ def generate(text):
 					results.append("19991999")
 					results.append("20012001")
 					results.append("20022002")
-				elif "pk" in ct:
-					results.append("libya123")
 				elif "us" in ct:
 					results.append("1020304050")
 					results.append("102030405060")
